@@ -3,3 +3,4 @@ env/
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
 CNN/fruits-360_100x100/
+CNN/old_test/
