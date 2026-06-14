@@ -1,0 +1,8 @@
+Experiment,Main change,Test Accuracy,Macro Precision,Macro Recall,Macro F1-score,Comment
+Baseline CNN,"32-64-128 filters, MaxPooling, no augmentation",0.94,0.94,0.94,0.94,Strong baseline; fulfills required thresholds.
+CNN + Data Augmentation,"Mild rotation, shift and zoom augmentation",0.95,0.96,0.95,0.95,Improves macro metrics compared with the baseline.
+Small CNN,Reduced filters to 16-32-64,0.97,0.97,0.96,0.96,Very strong performance with fewer filters.
+Large CNN,"Increased filters to 64-128-256, Adam lr=0.0001",0.97,0.97,0.97,0.97,Best custom CNN; higher computational cost.
+AveragePooling CNN,AveragePooling2D instead of MaxPooling2D,0.94,0.95,0.94,0.94,No improvement over MaxPooling baseline.
+Stride/Padding CNN,"First Conv2D uses strides=(2,2), padding='valid'",0.96,0.96,0.96,0.96,"Faster than baseline and slightly better, but less stable."
+MobileNetV2,Transfer learning with ImageNet pretrained MobileNetV2,0.97,0.98,0.98,0.98,Best overall macro metrics; fast convergence from pretrained features.
